@@ -1,6 +1,5 @@
 package com.one.mytest;
 
-import android.util.Log;
 
 import com.squareup.moshi.Moshi;
 
@@ -18,8 +17,6 @@ public class networking {
                 .addConverterFactory(MoshiConverterFactory.create(moshi))
                 .build();
         github make=retro.create(github.class);
-        Call<List<Data>> _call=make.listRepos();
-        Log.i("test","status ok");
-        return  _call;
+        return make.listRepos();
     }
 }
